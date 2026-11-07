@@ -339,7 +339,7 @@ def rec_bissect(binary, string_refs, blacklist):
 
     try:
         half_nb_strings = len(string_refs) // 2
-    except:
+    except TypeError:
         print_dbg(f"Found it: f{repr(string_refs)}", LVL_RES_ONLY, False)
         blacklist.append(string_refs.index)
         return blacklist
